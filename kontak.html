@@ -3,91 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kontak - SMK Muhammadiyah 4 Boyolali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="aset/icon/logo02-smal.png">
+    <style>
+        @font-face {
+            font-family: poppins;
+            src: url(aset/font/Poppins-Regular.ttf);
+        }
+        body {
+            font-family: poppins, sans-serif;
+        }
+        .nav-dropdown {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+        }
+        nav > ul > li:hover .nav-dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .navbar-glow {
+            box-shadow: 0 10px 30px rgba(0, 70, 220, 0.3);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a  href="index.html"><img class="kecil" src="aset/icon/logo02-smal.png" alt="Logo"></a>
-            <a  href="index.html"><img class="besar" src="aset/icon/logo02.png" alt="Logo"></a>
-       
+    <nav class="fixed w-full z-50 h-[10vh] bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 flex justify-between items-center px-4 sm:px-[5vh] navbar-glow transition-all duration-300">
+        <div class="logo flex items-center h-full">
+            <a href="index.html" class="transform hover:scale-110 transition-transform duration-300 block sm:hidden">
+                <img src="aset/icon/logo02-smal.png" alt="Logo" class="h-12 w-auto">
+            </a>
+            <a href="index.html" class="transform hover:scale-105 transition-transform duration-300 hidden sm:block">
+                <img src="aset/icon/logo02.png" alt="Logo" class="h-14 w-auto px-3 py-2 bg-white bg-opacity-90 rounded-[15px] shadow-lg">
+            </a>
         </div>
         
-        <ul>
-            <li>
-                <h1>&#9776;</h1>
-                <div class="dropdown">
-                    <ul>
-                        <li><a href="sejarah.html">Sejarah Berdiri</a></li>
-                        <li><a href="visimisi.html">Visi & Misi</a></li>
-                        <li><a href="susunan.html">Susunan Pengurus</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+        <ul class="flex items-center h-full gap-2">
+            <li class="relative group">
+                <button class="text-white p-2 sm:p-3 text-3xl sm:text-4xl hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300">&#9776;</button>
+                <div class="nav-dropdown absolute right-0 top-full pt-2 bg-blue-800 bg-opacity-95 rounded-[15px] min-w-max shadow-2xl">
+                    <ul class="py-2">
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="sejarah.html" class="text-white font-medium">📚 Sejarah Berdiri</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="visimisi.html" class="text-white font-medium">🎯 Visi & Misi</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="susunan.html" class="text-white font-medium">👥 Susunan Pengurus</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="kontak.html" class="text-white font-medium">📞 Kontak</a>
+                        </li>
                     </ul>
                 </div>   
             </li>
         </ul>
     </nav>
 
-    <!-- Sampul -->
-    <div class="sampul kontak">
-        <img src="aset/icon/bingkai.png" alt="" loading="eager">
+    <!-- Header Section with Background Image -->
+    <div class="w-full pt-[10vh] relative">
+        <img src="aset/icon/bingkai.png" alt="Header" class="w-full h-64 sm:h-80 object-cover">
+        <div class="absolute inset-0 pt-[10vh] bg-gradient-to-r from-blue-600/40 to-indigo-600/40"></div>
     </div>
 
-    <div class="container9">
-        <div class="kontak">
-            <h2><span>Kontak SMK Muhammadiyah 04 Boyolali</span></h2>
-            <div class="info">
-                <div class="info_alamat">
-                    <div class="alamat location">
-                        <img class="location" src="aset/icon/location.png" alt="">
-                        <div class="data_alamat">
-                            <h4>Alamat</h4>
-                            <p> Jl. Lembayung No. 4 Boyolali</p>
-                        </div>
+    <!-- Contact Content -->
+    <div class="w-full bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Kontak Kami</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 text-lg mt-6 max-w-2xl mx-auto">Hubungi kami untuk informasi lebih lanjut tentang SMK Muhammadiyah 04 Boyolali</p>
+            </div>
+
+            <!-- Contact Info Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Address -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <img src="aset/icon/location.png" alt="Location" class="h-12 w-12">
                     </div>
-                    <div class="alamat phone">
-                        <img class="phone" src="aset/icon/phone.png" alt="">
-                        <div class="data_alamat">
-                            <h4>Telpon</h4>
-                            <p>( 0276 ) 324016</p>
-                        </div>
-                        
-                    </div>
-                    <div class="alamat mail">
-                        <img class="mail" src="aset/icon/mail.png" alt="">
-                        <div class="data_alamat">
-                            <h4>Email</h4>
-                            <p>smk_muh4byl@yahoo.co.id</p>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Alamat</h3>
+                    <p class="text-gray-600">Jl. Lembayung No. 4 Boyolali</p>
                 </div>
-                
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.8952248531336!2d110.59716911902797!3d-7.531218967880521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a6eb6fddaa7bb%3A0x94f51cc0049817d8!2sSMK%20Muhammadiyah%204%20Boyolali!5e0!3m2!1sid!2sid!4v1710505612556!5m2!1sid!2sid" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <!-- Phone -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <img src="aset/icon/phone.png" alt="Phone" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Telpon</h3>
+                    <p class="text-gray-600">( 0276 ) 324016</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <img src="aset/icon/mail.png" alt="Mail" class="h-12 w-12">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Email</h3>
+                    <p class="text-gray-600">smk_muh4byl@yahoo.co.id</p>
                 </div>
             </div>
+
+            <!-- Map Section -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.8952248531336!2d110.59716911902797!3d-7.531218967880521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a6eb6fddaa7bb%3A0x94f51cc0049817d8!2sSMK%20Muhammadiyah%204%20Boyolali!5e0!3m2!1sid!2sid!4v1710505612556!5m2!1sid!2sid" class="w-full h-96" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-    </div>
-
-
-
-
-    <!-- Foother -->
-    <footer>
-        <h3>SMK Muhammadiyah 04 Boyolali</h3>
-        <div class="sosmet">
-            <a class="wa" href="#"><img src="aset/icon/wa.png" alt="wa"></a>
-            <a class="ig" href="#"><img src="aset/icon/ig.png" alt="ig"></a>
-            <a class="fb" href="#"><img src="aset/icon/fb.png" alt="fb"></a>
-            <a class="yt" href="#"><img src="aset/icon/youtube.png" alt="yt"></a>
-        </div>
-        <div class="copy">
-            <span>Copyright&copy; 2024 Joko Purnomo</span> | <a href="https://www.freepik.com">Icon by Freepik</a>
+    <!-- Footer -->
+    <footer class="w-full bg-gradient-to-r from-blue-800 via-blue-700 to-indigo-800 text-white py-12 px-4 sm:px-8 mt-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold mb-4">SMK Muhammadiyah 04 Boyolali</h3>
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/wa.png" alt="WhatsApp" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/ig.png" alt="Instagram" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/fb.png" alt="Facebook" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/youtube.png" alt="YouTube" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-blue-600 pt-6 text-center text-blue-100 text-sm">
+                <p class="mb-1">Copyright © 2024 SMK Muhammadiyah 04 Boyolali. All rights reserved.</p>
+                <p>Designed with 💙 by <span class="font-semibold text-white">Joko Purnomo</span> | Icon by <a href="https://www.freepik.com" class="text-white hover:underline">Freepik</a></p>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

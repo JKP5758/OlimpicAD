@@ -3,114 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sejarah</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sejarah - SMK Muhammadiyah 4 Boyolali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="aset/icon/logo02-smal.png">
+    <style>
+        @font-face {
+            font-family: poppins;
+            src: url(aset/font/Poppins-Regular.ttf);
+        }
+        body {
+            font-family: poppins, sans-serif;
+        }
+        .nav-dropdown {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+        }
+        nav > ul > li:hover .nav-dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .navbar-glow {
+            box-shadow: 0 10px 30px rgba(0, 70, 220, 0.3);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100">
    <!-- Navbar -->
-   <nav>
-        <div class="logo">
-            <a  href="index.html"><img class="kecil" src="aset/icon/logo02-smal.png" alt="Logo"></a>
-            <a  href="index.html"><img class="besar" src="aset/icon/logo02.png" alt="Logo"></a>
-    
+   <nav class="fixed w-full z-50 h-[10vh] bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 flex justify-between items-center px-4 sm:px-[5vh] navbar-glow transition-all duration-300">
+        <div class="logo flex items-center h-full">
+            <a href="index.html" class="transform hover:scale-110 transition-transform duration-300 block sm:hidden">
+                <img src="aset/icon/logo02-smal.png" alt="Logo" class="h-12 w-auto">
+            </a>
+            <a href="index.html" class="transform hover:scale-105 transition-transform duration-300 hidden sm:block">
+                <img src="aset/icon/logo02.png" alt="Logo" class="h-14 w-auto px-3 py-2 bg-white bg-opacity-90 rounded-[15px] shadow-lg">
+            </a>
         </div>
         
-        <ul>
-            <li>
-                <h1>&#9776;</h1>
-                <div class="dropdown">
-                    <ul>
-                        <li><a href="sejarah.html">Sejarah Berdiri</a></li>
-                        <li><a href="visimisi.html">Visi & Misi</a></li>
-                        <li><a href="susunan.html">Susunan Pengurus</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+        <ul class="flex items-center h-full gap-2">
+            <li class="relative group">
+                <button class="text-white p-2 sm:p-3 text-3xl sm:text-4xl hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300">&#9776;</button>
+                <div class="nav-dropdown absolute right-0 top-full pt-2 bg-blue-800 bg-opacity-95 rounded-[15px] min-w-max shadow-2xl">
+                    <ul class="py-2">
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="sejarah.html" class="text-white font-medium">📚 Sejarah Berdiri</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="visimisi.html" class="text-white font-medium">🎯 Visi & Misi</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="susunan.html" class="text-white font-medium">👥 Susunan Pengurus</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700">
+                            <a href="kontak.html" class="text-white font-medium">📞 Kontak</a>
+                        </li>
                     </ul>
                 </div>   
             </li>
         </ul>
     </nav>
 
-    
-<!-- Sampul -->
-    <div class="sampul sejarah">
-        <img src="aset/icon/bingkai.png" alt="" loading="eager">
+    <!-- Header Section with Background Image -->
+    <div class="w-full pt-[10vh] relative">
+        <img src="aset/icon/bingkai.png" alt="Header" class="w-full h-64 sm:h-80 object-cover">
+        <div class="absolute inset-0 pt-[10vh] bg-gradient-to-r from-blue-600/40 to-indigo-600/40"></div>
     </div>
 
+    <!-- Content Section -->
+    <div class="w-full bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Sejarah Singkat Berdirinya</h2>
+                <h3 class="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">SMK Muhammadiyah 04 Boyolali</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
+            </div>
 
-<!-- SEJARAH -->
-    <div class="container6">
-        <div class="sejarah">
-            <h2>SEJARAH SINGKAT BERDIRINYA</h2>
-            <h2>SMK Muhammadiyah 04 Boyolali</h2>
-            <div class="isi_sejarah">
-                <p class="pertama">
-                    SMK Muhammadiyah 04 Boyolali merupakan satu – satunya sekolah yang berada di jantung kota Boyolali. Sekolah berlabel Muhammadiyah ini menggunakan asas islam sebagai landasan dasar dari sekolah.
-                </p>
-                <br>
-                <p>
-                    berdiri pada Juni 1997 dengan label Sekolah Teknik Menengah ( STM ) dengan Jurusan awal
-                </p>
-                <br>
-                <ol>
-                    <li>Teknik Mesin Otomotif</li>
-                    <li>Teknik Mesin Industri</li>
-                </ol>
-                <br>
-                <p>
-                    seiring dengan berjalannya waktu, maka sebagai bentuk pengembangan SMK Muhammadiyah 04 Boyolali menambah jurusan yang dianggap dapat terserap kedalam industri dan populer kedalam masyarakat.
-                </p>
-                <br>
-                <p>
-                    sampai tahun 2019 ini, jurusan di SMK Muhammadiyah 04 Boyolali terdapat 7 jurusan, yakni:
-                </p>
-                <br>
-                <ol>
-                    <li>Teknik Pemeliharaan Mekanik Industri</li>
-                    <li>Teknik Otomotif Kendaraan Ringan</li>
-                    <li>Teknik Otomotif Sepeda Motor</li>
-                    <li>Rekayasa Perangkat Lunak</li>
-                    <li>Jasa Boga</li>
-                    <li>Multimedia</li>
-                    <li>Multimedia</li>
-                </ol>
-                <br>
-                <p>
-                    dengan 7 Jurusan ini diharapkan dapat memberikan minat kepada masyarakat untuk menyekolahkan putra – putrinya ke SMK Muhammadiyah 04 Boyolali yang akan di didik menjadi insan yang cerdas dan berkarakter serta religius.
-                </p>
-                <br>
-                <p>
-                    di samping Jurusan yang ada, SMK Muhammadiyah 04 Boyolali juga di support dengan kegiatan – kegiatan sekolah yang menumbuhkan bakat dan minat dari siswa, yaitu :
-                </p>
-                <br>
-                <ol>
-                    <li>IPM</li>
-                    <li>HW</li>
-                    <li>paskib</li>
-                    <li>ektra olahraga</li>
-                    <li>studi club</li>
-                </ol>
-                <br>
-                <p>
-                    semoga SMK Muhammadiyah 04 Boyolali dapat terus berkontribusi positif terhadap masyarakat Boyoali secara khusus dan indonesia secara umum.
-                </p>
+            <!-- Content -->
+            <div class="prose prose-lg max-w-none">
+                <div class="bg-white rounded-2xl shadow-lg p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed text-lg font-semibold">
+                        SMK Muhammadiyah 04 Boyolali merupakan satu – satunya sekolah yang berada di jantung kota Boyolali. Sekolah berlabel Muhammadiyah ini menggunakan asas islam sebagai landasan dasar dari sekolah.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        Berdiri pada Juni 1997 dengan label Sekolah Teknik Menengah (STM) dengan Jurusan awal:
+                    </p>
+
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                        <li>Teknik Mesin Otomotif</li>
+                        <li>Teknik Mesin Industri</li>
+                    </ol>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Seiring dengan berjalannya waktu, maka sebagai bentuk pengembangan SMK Muhammadiyah 04 Boyolali menambah jurusan yang dianggap dapat terserap kedalam industri dan populer kedalam masyarakat.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Sampai tahun 2019 ini, jurusan di SMK Muhammadiyah 04 Boyolali terdapat 7 jurusan, yakni:
+                    </p>
+
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                        <li>Teknik Pemeliharaan Mekanik Industri</li>
+                        <li>Teknik Otomotif Kendaraan Ringan</li>
+                        <li>Teknik Otomotif Sepeda Motor</li>
+                        <li>Rekayasa Perangkat Lunak</li>
+                        <li>Jasa Boga</li>
+                        <li>Multimedia</li>
+                        <li>Farmasi Klinik & Komunitas</li>
+                    </ol>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Dengan 7 Jurusan ini diharapkan dapat memberikan minat kepada masyarakat untuk menyekolahkan putra – putrinya ke SMK Muhammadiyah 04 Boyolali yang akan didik menjadi insan yang cerdas dan berkarakter serta religius.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Di samping Jurusan yang ada, SMK Muhammadiyah 04 Boyolali juga di support dengan kegiatan – kegiatan sekolah yang menumbuhkan bakat dan minat dari siswa, yaitu:
+                    </p>
+
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                        <li>IPM (Ikatan Pelajar Muhammadiyah)</li>
+                        <li>HW (Hisbul Wathon)</li>
+                        <li>Paskib (Pasukan Inti Keselamatan Bersama)</li>
+                        <li>Ekstra Olahraga</li>
+                        <li>Studi Club</li>
+                    </ol>
+
+                    <p class="text-gray-700 leading-relaxed font-semibold text-blue-700">
+                        Semoga SMK Muhammadiyah 04 Boyolali dapat terus berkontribusi positif terhadap masyarakat Boyolali secara khusus dan Indonesia secara umum.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-   <!-- Foother -->
-   <footer>
-    <h3>SMK Muhammadiyah 04 Boyolali</h3>
-    <div class="sosmet">
-        <a class="wa" href="#"><img src="aset/icon/wa.png" alt="wa"></a>
-        <a class="ig" href="#"><img src="aset/icon/ig.png" alt="ig"></a>
-        <a class="fb" href="#"><img src="aset/icon/fb.png" alt="fb"></a>
-        <a class="yt" href="#"><img src="aset/icon/youtube.png" alt="yt"></a>
-    </div>
-    <div class="copy">
-        <span>Copyright&copy; 2024 Joko Purnomo</span> | <a href="https://www.freepik.com">Icon by Freepik</a>
-    </div>
-</footer>
+   <!-- Footer -->
+   <footer class="w-full bg-gradient-to-r from-blue-800 via-blue-700 to-indigo-800 text-white py-12 px-4 sm:px-8 mt-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold mb-4">SMK Muhammadiyah 04 Boyolali</h3>
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/wa.png" alt="WhatsApp" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/ig.png" alt="Instagram" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/fb.png" alt="Facebook" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/youtube.png" alt="YouTube" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-blue-600 pt-6 text-center text-blue-100 text-sm">
+                <p class="mb-1">Copyright © 2024 SMK Muhammadiyah 04 Boyolali. All rights reserved.</p>
+                <p>Designed with 💙 by <span class="font-semibold text-white">Joko Purnomo</span> | Icon by <a href="https://www.freepik.com" class="text-white hover:underline">Freepik</a></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
