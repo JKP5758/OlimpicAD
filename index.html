@@ -400,68 +400,299 @@
     </div>
 
 
-    <!-- Pengelola -->
-    <div class="w-full flex flex-wrap justify-center text-center items-center p-[5vh]">
-        <div class="p-10 bg-white bg-opacity-75 shadow-lg rounded-[30px]">
-            <div class="p-3.75">
-                <h2 class="text-xl md:text-2xl font-bold">PENGELOLAAN</h2>
-                <p class="text-sm md:text-base">Temukan berbagai informasi terkait dengan pengelolaan aset dan fasilitas di SMK Muhammadiyah 04 Boyolali untuk mendukung efisiensi dan kelancaran kegiatan pendidikan.</p>
+    <!-- Pengelolaan -->
+    <div class="w-full bg-gradient-to-b from-white to-gray-50 py-16 px-4 sm:px-8" id="pengelolaan">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Pengelolaan Aset & Fasilitas</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Informasi lengkap tentang aset dan fasilitas unggulan untuk mendukung kelancaran kegiatan pendidikan</p>
             </div>
-            <div class="h-full flex flex-wrap flex-row justify-around items-center">
-                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
-                    <img src="aset/img/bg1.png" alt="sekolah" loading="lazy" class="w-full rounded-[10px]">
-                    <span class="underline scale-150 my-2.5">Sekolah</span>
-                    <p class="text-sm">Luas seluruh SMK Muhammadiyah 04 Boyolali 12.682m&sup2;</p>
+
+            <!-- Management Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Sekolah -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-56 bg-gradient-to-br from-blue-400 to-cyan-600">
+                        <img src="aset/img/bg1.png" alt="Luas Sekolah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/70 to-cyan-600/70 group-hover:from-blue-500 group-hover:to-cyan-700 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-7xl drop-shadow-lg">🏫</div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Luas Sekolah</h3>
+                        <p class="text-gray-600 text-lg font-semibold mb-3">12.682 m²</p>
+                        <p class="text-gray-600 leading-relaxed">Lahan sekolah yang luas dengan tata ruang modern untuk mendukung berbagai kegiatan pembelajaran dan pengembangan siswa</p>
+                        <div class="mt-4 pt-4 border-t-2 border-gray-200">
+                            <span class="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">📊 Terukur</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
-                    <img src="aset/img/hd3.jpg" alt="madrasah" loading="lazy" class="w-full rounded-[10px]">
-                    <span class="underline scale-150 my-2.5">Bangunan</span>
-                    <p class="text-sm">Luas Bangunan di SMK Muhammadiyah04 Boyolali 3.695m&sup2;</p>
+
+                <!-- Card 2: Bangunan -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-56 bg-gradient-to-br from-purple-400 to-indigo-600">
+                        <img src="aset/img/hd3.jpg" alt="Bangunan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400/70 to-indigo-600/70 group-hover:from-purple-500 group-hover:to-indigo-700 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-7xl drop-shadow-lg">🏗️</div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Luas Bangunan</h3>
+                        <p class="text-gray-600 text-lg font-semibold mb-3">3.695 m²</p>
+                        <p class="text-gray-600 leading-relaxed">Infrastruktur bangunan berkualitas tinggi dengan standar keselamatan internasional untuk kenyamanan pembelajaran</p>
+                        <div class="mt-4 pt-4 border-t-2 border-gray-200">
+                            <span class="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">🔧 Modern</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
-                    <img src="aset/img/hd1.jpg" alt="Pesantren" loading="lazy" class="w-full rounded-[10px]">
-                    <span class="underline scale-150 my-2.5">Ruang</span>
-                    <p class="text-sm">Jumlah Ruang kelas dan Fasilitas lainnya ~57 Ruang</p>
+
+                <!-- Card 3: Ruang & Fasilitas -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-56 bg-gradient-to-br from-green-400 to-emerald-600">
+                        <img src="aset/img/hd1.jpg" alt="Ruang Fasilitas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-40">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-400/70 to-emerald-600/70 group-hover:from-green-500 group-hover:to-emerald-700 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-7xl drop-shadow-lg">🏛️</div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Ruang & Fasilitas</h3>
+                        <p class="text-gray-600 text-lg font-semibold mb-3">~57 Ruang</p>
+                        <p class="text-gray-600 leading-relaxed">Ruang kelas, laboratorium, perpustakaan, dan fasilitas pendukung lainnya yang lengkap dan terintegrasi</p>
+                        <div class="mt-4 pt-4 border-t-2 border-gray-200">
+                            <span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">⭐ Lengkap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="mt-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-bold mb-2">100%</div>
+                        <p class="text-lg font-medium opacity-90">✅ Terawat</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold mb-2">24/7</div>
+                        <p class="text-lg font-medium opacity-90">🔒 Keamanan</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold mb-2">∞</div>
+                        <p class="text-lg font-medium opacity-90">🌱 Berkelanjutan</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Galery -->
-    <div class="w-full p-[10%_7.5%] text-center">
-        <div class="p-[50px_0] bg-white rounded-[30px] shadow-lg">
-            <h2 class="text-xl md:text-2xl font-bold"><span class="text-white px-[50px] py-5 rounded-[20px] bg-blue-700 bg-opacity-70">Galeri SMK</span></h2>
-            <div class="flex flex-wrap p-0 justify-center mt-[30px]">
-                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5">
-                    <img src="aset/img/galeri/01.png" alt="01" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/02.png" alt="02" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/03.png" alt="03" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+    <!-- Galeri -->
+    <div class="w-full bg-gray-100 py-16 px-4 sm:px-8" id="galeri">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Galeri SMK</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Koleksi momen berharga dan aktivitas menarik di SMK Muhammadiyah 04 Boyolali</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Image 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/01.png" alt="Galeri 01" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Aktivitas Sekolah</h3>
+                        <p class="text-sm opacity-90">Momen belajar mengajar</p>
+                    </div>
                 </div>
-                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5">
-                    <img src="aset/img/galeri/04.png" alt="04" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/05.png" alt="05" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/06.png" alt="06" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+
+                <!-- Image 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/02.png" alt="Galeri 02" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Laboratorium</h3>
+                        <p class="text-sm opacity-90">Praktik siswa</p>
+                    </div>
                 </div>
-                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5 hidden lg:flex lg:flex-col">
-                    <img src="aset/img/galeri/07.png" alt="07" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/08.png" alt="08" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
-                    <img src="aset/img/galeri/09.png" alt="09" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+
+                <!-- Image 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/03.png" alt="Galeri 03" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Perpustakaan</h3>
+                        <p class="text-sm opacity-90">Pusat sumber belajar</p>
+                    </div>
                 </div>
+
+                <!-- Image 4 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/04.png" alt="Galeri 04" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Olahraga</h3>
+                        <p class="text-sm opacity-90">Aktivitas ekstrakurikuler</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/05.png" alt="Galeri 05" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Event Sekolah</h3>
+                        <p class="text-sm opacity-90">Acara spesial</p>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="aset/img/galeri/06.png" alt="Galeri 06" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Kelas</h3>
+                        <p class="text-sm opacity-90">Suasana pembelajaran</p>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hidden lg:block">
+                    <img src="aset/img/galeri/07.png" alt="Galeri 07" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Kantin</h3>
+                        <p class="text-sm opacity-90">Area istirahat</p>
+                    </div>
+                </div>
+
+                <!-- Image 8 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hidden lg:block">
+                    <img src="aset/img/galeri/08.png" alt="Galeri 08" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Ruang Guru</h3>
+                        <p class="text-sm opacity-90">Fasilitas pendidik</p>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hidden lg:block">
+                    <img src="aset/img/galeri/09.png" alt="Galeri 09" loading="lazy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-lg font-bold mb-1">Halaman</h3>
+                        <p class="text-sm opacity-90">Area umum</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    📸 Lihat Lebih Banyak
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Foother -->
-    <footer class="h-auto w-full flex flex-col justify-center items-center text-center bg-blue-700 bg-opacity-70">
-        <h3 class="p-3.75 text-white text-lg md:text-xl">SMK Muhammadiyah 04 Boyolali</h3>
-        <div class="flex justify-center items-center">
-            <a class="wa flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-green-500 hover:bg-opacity-50 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/wa.png" alt="wa" class="w-[25px] h-[25px]"></a>
-            <a class="ig flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-pink-500 hover:bg-opacity-70 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/ig.png" alt="ig" class="w-[25px] h-[25px]"></a>
-            <a class="fb flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-blue-600 hover:bg-opacity-50 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/fb.png" alt="fb" class="w-[25px] h-[25px]"></a>
-            <a class="yt flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-red-500 hover:bg-opacity-80 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/youtube.png" alt="yt" class="w-[25px] h-[25px]"></a>
-        </div>
-        <div class="text-white p-2.5 w-full bg-blue-700">
-            <span>Copyright&copy; 2024 Joko Purnomo</span> | <a href="https://www.freepik.com" class="text-white no-underline">Icon by Freepik</a>
+    <!-- Footer -->
+    <footer class="w-full bg-gradient-to-r from-blue-800 via-blue-700 to-indigo-800 text-white py-16 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- About Section -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="aset/icon/logo02-smal.png" alt="Logo" class="h-10 w-auto">
+                        <h3 class="text-xl font-bold">SMK Muhammadiyah 04</h3>
+                    </div>
+                    <p class="text-blue-100 text-sm leading-relaxed">Membangun generasi berkompeten dan berkarakter melalui pendidikan berkualitas</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Navigasi Cepat</h4>
+                    <ul class="space-y-3 text-blue-100">
+                        <li><a href="#data" class="hover:text-white transition-colors duration-300">📍 Profil Sekolah</a></li>
+                        <li><a href="#program" class="hover:text-white transition-colors duration-300">📚 Program Keahlian</a></li>
+                        <li><a href="#pengelolaan" class="hover:text-white transition-colors duration-300">🏛️ Pengelolaan</a></li>
+                        <li><a href="#galeri" class="hover:text-white transition-colors duration-300">📸 Galeri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontak Kami</h4>
+                    <ul class="space-y-3 text-blue-100 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="text-lg mt-1">📍</span>
+                            <span>Jl. Lembayung No. 4<br>Boyolali, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-lg">📞</span>
+                            <span>(0276) xxxxxx</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-lg">✉️</span>
+                            <span>info@smkm04.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Jam Operasional</h4>
+                    <ul class="space-y-2 text-blue-100 text-sm">
+                        <li class="flex items-center justify-between">
+                            <span>Senin - Jumat:</span>
+                            <span class="font-semibold">06:30 - 15:30</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Sabtu:</span>
+                            <span class="font-semibold">06:30 - 13:00</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Minggu:</span>
+                            <span class="font-semibold">Tutup</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-blue-600 my-8"></div>
+
+            <!-- Social Media & Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Social Media -->
+                <div class="flex gap-4">
+                    <a href="#" class="group flex p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/wa.png" alt="WhatsApp" class="w-5 h-5 group-hover:brightness-110">
+                    </a>
+                    <a href="#" class="group flex p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/ig.png" alt="Instagram" class="w-5 h-5 group-hover:brightness-110">
+                    </a>
+                    <a href="#" class="group flex p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/fb.png" alt="Facebook" class="w-5 h-5 group-hover:brightness-110">
+                    </a>
+                    <a href="#" class="group flex p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110">
+                        <img src="aset/icon/youtube.png" alt="YouTube" class="w-5 h-5 group-hover:brightness-110">
+                    </a>
+                </div>
+
+                <!-- Copyright & Credits -->
+                <div class="text-center md:text-right text-blue-100 text-sm">
+                    <p class="mb-1">Copyright © 2024 SMK Muhammadiyah 04 Boyolali. All rights reserved.</p>
+                    <p>Designed with 💙 by <span class="font-semibold text-white">Joko Purnomo</span> | Icon by <a href="https://www.freepik.com" class="text-white hover:underline">Freepik</a></p>
+                </div>
+            </div>
         </div>
     </footer>
 
