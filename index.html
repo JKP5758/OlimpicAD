@@ -4,29 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMK Muhammadiyah 4 Boyolali</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="aset/icon/logo02-smal.png">
+    <style>
+        @font-face {
+            font-family: poppins;
+            src: url(aset/font/Poppins-Regular.ttf);
+        }
+        body {
+            font-family: poppins, sans-serif;
+        }
+        .mengambang:hover {
+            transform: scale(1.05);
+            box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);
+        }
+        .nav-dropdown {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+        }
+        nav > ul > li:hover .nav-dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .navbar-glow {
+            box-shadow: 0 10px 30px rgba(0, 70, 220, 0.3);
+        }
+        .video-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 70, 220, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+            z-index: 2;
+        }
+        .video-title-animate {
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-link-hover {
+            position: relative;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s ease;
+        }
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+    </style>
 
 </head>
-<body>
+<body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a  href="index.html"><img class="kecil" src="aset/icon/logo02-smal.png" alt="Logo"></a>
-            <a  href="index.html"><img class="besar" src="aset/icon/logo02.png" alt="Logo"></a>
-       
+    <nav class="fixed w-full z-50 h-[10vh] bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 flex justify-between items-center px-4 sm:px-[5vh] navbar-glow transition-all duration-300">
+        <div class="logo flex items-center h-full">
+            <a href="index.html" class="transform hover:scale-110 transition-transform duration-300 block sm:hidden">
+                <img src="aset/icon/logo02-smal.png" alt="Logo" class="h-12 w-auto">
+            </a>
+            <a href="index.html" class="transform hover:scale-105 transition-transform duration-300 hidden sm:block">
+                <img src="aset/icon/logo02.png" alt="Logo" class="h-14 w-auto px-3 py-2 bg-white bg-opacity-90 rounded-[15px] shadow-lg">
+            </a>
         </div>
         
-        <ul>
-            <li>
-                <h1>&#9776;</h1>
-                <div class="dropdown">
-                    <ul>
-                        <li><a href="sejarah.html">Sejarah Berdiri</a></li>
-                        <li><a href="visimisi.html">Visi & Misi</a></li>
-                        <li><a href="susunan.html">Susunan Pengurus</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+        <ul class="flex items-center h-full gap-2">
+            <li class="relative group">
+                <button class="text-white p-2 sm:p-3 text-3xl sm:text-4xl hover:bg-white hover:bg-opacity-20 rounded-full transition-all duration-300">&#9776;</button>
+                <div class="nav-dropdown absolute right-0 top-full pt-2 bg-blue-800 bg-opacity-95 rounded-[15px] min-w-max shadow-2xl">
+                    <ul class="py-2">
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700 group/item">
+                            <a href="sejarah.html" class="text-white block nav-link-hover font-medium text-sm">📚 Sejarah Berdiri</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700 group/item">
+                            <a href="visimisi.html" class="text-white block nav-link-hover font-medium text-sm">🎯 Visi & Misi</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700 group/item">
+                            <a href="susunan.html" class="text-white block nav-link-hover font-medium text-sm">👥 Susunan Pengurus</a>
+                        </li>
+                        <li class="px-6 py-3 text-left rounded-lg transition-all duration-300 hover:bg-blue-700 group/item">
+                            <a href="kontak.html" class="text-white block nav-link-hover font-medium text-sm">📞 Kontak</a>
+                        </li>
                     </ul>
                 </div>   
             </li>
@@ -34,47 +110,49 @@
     </nav>
 
     <!-- Video -->
-    <div class="container1">
-        <video src="aset/video/video01.webm" autoplay muted loop></video>
-        <h1>SMK Muhammadiyah 04 Boyolali</h1>
+    <div class="w-full h-screen flex justify-center items-center flex-wrap mb-[50px] relative video-overlay">
+        <video src="aset/video/video01.webm" autoplay muted loop class="absolute inset-0 object-cover w-full h-full" style="height: 100%; z-index: 0;"></video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" style="z-index: 1;"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-8">
+            <h1 class="video-title-animate text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-lg" style="text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);">SMK Muhammadiyah 04 Boyolali</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-100 font-medium drop-shadow-md" style="text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);">Membangun Generasi Berkompeten dan Berkarakter</p>
+            <div class="mt-8 flex gap-4 justify-center flex-wrap">
+                <a href="#data" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">Jelajahi</a>
+                <a href="#program" class="px-8 py-3 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105 border-2 border-white backdrop-blur-sm">Pelajari</a>
+            </div>
+        </div>
     </div>
 
     <!-- Data -->
-    <div class="container2">
-        <div class="data">
-            <div class="utama mengambang">
+    <div class="w-full p-[5%]" id="data">
+        <div class="w-full flex flex-wrap flex-row justify-around items-center p-[5%] rounded-[30px] shadow-lg bg-white bg-opacity-75 gap-8 md:gap-4 flex-col md:flex-row">
+            <div class="mengambang w-full md:w-1/2 h-full flex flex-col bg-white rounded-[40px] justify-around text-center items-center p-[5%] transition-all duration-400">
                 <div class="title">
-                    <h2>SMK MUHAMMADIYAH 04 BOYOLALI</h2>
-                    <h3> Jl. Lembayung No. 4 Boyolali</h3>
+                    <h2 class="font-bold text-lg md:text-xl">SMK MUHAMMADIYAH 04 BOYOLALI</h2>
+                    <h3 class="text-sm md:text-base">Jl. Lembayung No. 4 Boyolali</h3>
                 </div>
-                <p>SMK Muhammadiyah 04 Boyolali adalah sekolah yang memiliki komitmen untuk menghasilkan lulusan yang siap kerja, berjiwa wirausaha, cerdas, kompetitif,dan memiliki jati diri bangsa, serta mampu mengembangkan keunggulan lokal dan dapat bersaing di pasar global.</p>
+                <p class="mt-2.5 text-sm md:text-base">SMK Muhammadiyah 04 Boyolali adalah sekolah yang memiliki komitmen untuk menghasilkan lulusan yang siap kerja, berjiwa wirausaha, cerdas, kompetitif,dan memiliki jati diri bangsa, serta mampu mengembangkan keunggulan lokal dan dapat bersaing di pasar global.</p>
             </div>
-            <div class="kedua">
-                <div class="data_tentang mengambang">
-                    
-                    <img src="aset/icon/teacher.png" alt="icon1">
-                    
-                    <div class="isi_data">
+            <div class="w-full md:w-1/2 h-full flex flex-row justify-around text-center items-center p-[5%] flex-wrap gap-2.5">
+                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
+                    <img src="aset/icon/teacher.png" alt="icon1" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
                         <h4>Jumlah Guru</h4>
-                        <h3>57</h3>
+                        <h3 class="font-bold text-lg">57</h3>
                     </div>
                 </div>
-                <div class="data_tentang mengambang">
-                    
-                    <img src="aset/icon/class.png" alt="icon2">
-                    
-                    <div class="isi_data">
+                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
+                    <img src="aset/icon/class.png" alt="icon2" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
                         <h4>Jumlah Ruang Kelas</h4>
-                        <h3>31</h3>
+                        <h3 class="font-bold text-lg">31</h3>
                     </div>
                 </div>
-                <div class="data_tentang mengambang">
-                    
-                    <img src="aset/icon/pople.png" alt="icon3">
-                    
-                    <div class="isi_data">
+                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
+                    <img src="aset/icon/pople.png" alt="icon3" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
                         <h4>Jumlah Siswa</h4>
-                        <h3>~1085</h3>
+                        <h3 class="font-bold text-lg">~1085</h3>
                     </div>
                 </div>
             </div>
@@ -82,134 +160,128 @@
     </div>
 
     <!-- Program Pengembangan -->
-    <div class="container4">
-        <div class="program_pengembangan">
-            <div class="judul">
-                <h2><span class="warna">PROGRAM</span> KEAHLIAN</h2>
+    <div class="w-full p-[10%]" id="program">
+        <div class="w-full p-0 md:p-[0_10%] flex flex-col flex-wrap justify-start">
+            <div class="px-5 py-5 mx-2.5 rounded-[10px]">
+                <h2 class="text-xl md:text-2xl"><span class="px-2.5 py-1.25 text-white bg-blue-700 bg-opacity-70 rounded-[10px]">PROGRAM</span> KEAHLIAN</h2>
             </div>
-            <div class="daftar_program">
-                <div class="program mengambang">
-                    <img src="aset/icon/gear.png" alt="program1">
-                    <div class="isi_program">
-                        <h3>Teknik Mekanik Industri</h3>
-                        <p>
-                            Jurusan Teknik Mekanik Industri mempelajari desain, produksi, dan pemeliharaan sistem mekanik dalam konteks industri untuk meningkatkan efisiensi produksi.</p>
+            <div class="w-full">
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/gear.png" alt="program1" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Teknik Mekanik Industri</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik Mekanik Industri mempelajari desain, produksi, dan pemeliharaan sistem mekanik dalam konteks industri untuk meningkatkan efisiensi produksi.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/car.png" alt="program2">
-                    <div class="isi_program">
-                        <h3>Teknik Kendaraan Ringan</h3>
-                        <p>Jurusan Teknik Kendaraan Ringan mempersiapkan mahasiswa untuk memahami dan mengelola teknologi dalam perawatan, perbaikan, dan manajemen kendaraan bermotor ringan seperti mobil dan sepeda motor.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/car.png" alt="program2" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Teknik Kendaraan Ringan</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik Kendaraan Ringan mempersiapkan mahasiswa untuk memahami dan mengelola teknologi dalam perawatan, perbaikan, dan manajemen kendaraan bermotor ringan seperti mobil dan sepeda motor.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/motor.png" alt="program3">
-                    <div class="isi_program">
-                        <h3>Teknik dan Bisnis Sepada Motor</h3>
-                        <p>Jurusan Teknik dan Bisnis Sepeda Motor membekali mahasiswa dengan pengetahuan teknis dan keterampilan bisnis yang diperlukan untuk merancang, memproduksi, dan mengelola bisnis sepeda motor serta industri terkait.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/motor.png" alt="program3" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Teknik dan Bisnis Sepada Motor</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik dan Bisnis Sepeda Motor membekali mahasiswa dengan pengetahuan teknis dan keterampilan bisnis yang diperlukan untuk merancang, memproduksi, dan mengelola bisnis sepeda motor serta industri terkait.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/laptop.png" alt="program4">
-                    <div class="isi_program">
-                        <h3>Rekayasa Perangkat Lunak</h3>
-                        <p>Jurusan Rekayasa Perangkat Lunak mempersiapkan mahasiswa untuk mengembangkan perangkat lunak, mulai dari perencanaan hingga implementasi, serta memahami prinsip-prinsip desain dan manajemen proyek perangkat lunak.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/laptop.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Rekayasa Perangkat Lunak</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Rekayasa Perangkat Lunak mempersiapkan mahasiswa untuk mengembangkan perangkat lunak, mulai dari perencanaan hingga implementasi, serta memahami prinsip-prinsip desain dan manajemen proyek perangkat lunak.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/cutlery.png" alt="program4">
-                    <div class="isi_program">
-                        <h3>Tata Boga</h3>
-                        <p>Jurusan Tata Boga mempersiapkan mahasiswa untuk menguasai keterampilan memasak, manajemen dapur, dan pelayanan makanan untuk industri perhotelan dan restoran.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/cutlery.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Tata Boga</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Tata Boga mempersiapkan mahasiswa untuk menguasai keterampilan memasak, manajemen dapur, dan pelayanan makanan untuk industri perhotelan dan restoran.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/video.png" alt="program4">
-                    <div class="isi_program">
-                        <h3>Multimedia</h3>
-                        <p>Jurusan Multimedia mempersiapkan mahasiswa untuk menguasai berbagai teknologi dan keterampilan kreatif, seperti desain grafis, produksi video, dan animasi, untuk menciptakan konten multimedia yang inovatif dan menarik.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/video.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Multimedia</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Multimedia mempersiapkan mahasiswa untuk menguasai berbagai teknologi dan keterampilan kreatif, seperti desain grafis, produksi video, dan animasi, untuk menciptakan konten multimedia yang inovatif dan menarik.</p>
                     </div>
                 </div>
-                <div class="program mengambang">
-                    <img src="aset/icon/medicine.png" alt="program4">
-                    <div class="isi_program">
-                        <h3>Farmasi Klink dan Komunitas</h3>
-                        <p>Jurusan Farmasi Klinik dan Komunitas mempersiapkan mahasiswa untuk memberikan layanan farmasi yang berkualitas baik di lingkungan klinik maupun masyarakat. Mereka mempelajari tentang penggunaan obat-obatan, konseling pasien, manajemen farmasi, serta peran farmasis dalam sistem perawatan kesehatan.</p>
+                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
+                    <img src="aset/icon/medicine.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
+                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
+                        <h3 class="font-bold text-base md:text-lg">Farmasi Klink dan Komunitas</h3>
+                        <p class="mt-1.25 text-sm md:text-base">Jurusan Farmasi Klinik dan Komunitas mempersiapkan mahasiswa untuk memberikan layanan farmasi yang berkualitas baik di lingkungan klinik maupun masyarakat. Mereka mempelajari tentang penggunaan obat-obatan, konseling pasien, manajemen farmasi, serta peran farmasis dalam sistem perawatan kesehatan.</p>
                     </div>
                 </div>
             </div>
-            
-
         </div>
     </div>
 
 
     <!-- Pengelola -->
-    <div class="container3">
-        <div class="pengelola">
-            <div class="judul">
-                <h2>PENGELOLAAN</h2>
-                <p>Temukan berbagai informasi terkait dengan pengelolaan aset dan fasilitas di SMK Muhammadiyah 04 Boyolali untuk mendukung efisiensi dan kelancaran kegiatan pendidikan.</p>
+    <div class="w-full flex flex-wrap justify-center text-center items-center p-[5vh]">
+        <div class="p-10 bg-white bg-opacity-75 shadow-lg rounded-[30px]">
+            <div class="p-3.75">
+                <h2 class="text-xl md:text-2xl font-bold">PENGELOLAAN</h2>
+                <p class="text-sm md:text-base">Temukan berbagai informasi terkait dengan pengelolaan aset dan fasilitas di SMK Muhammadiyah 04 Boyolali untuk mendukung efisiensi dan kelancaran kegiatan pendidikan.</p>
             </div>
-            <div class="isi">
-                <div class="card mengambang">
-                    <img src="aset/img/bg1.png" alt="sekolah" loading="lazy">
-                    <span>Sekolah</span>
-                    <p>Luas seluruh SMK Muhammadiyah 04 Boyolali 12.682m&sup2;</p>
+            <div class="h-full flex flex-wrap flex-row justify-around items-center">
+                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
+                    <img src="aset/img/bg1.png" alt="sekolah" loading="lazy" class="w-full rounded-[10px]">
+                    <span class="underline scale-150 my-2.5">Sekolah</span>
+                    <p class="text-sm">Luas seluruh SMK Muhammadiyah 04 Boyolali 12.682m&sup2;</p>
                 </div>
-                <div class="card mengambang">
-                    <img src="aset/img/hd3.jpg" alt="madrasah" loading="lazy">
-                    <span>Bangunan</span>
-                    <p>Luas Bangunan di SMK Muhammadiyah04 Boyolali 3.695m&sup2;</p>
+                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
+                    <img src="aset/img/hd3.jpg" alt="madrasah" loading="lazy" class="w-full rounded-[10px]">
+                    <span class="underline scale-150 my-2.5">Bangunan</span>
+                    <p class="text-sm">Luas Bangunan di SMK Muhammadiyah04 Boyolali 3.695m&sup2;</p>
                 </div>
-                <div class="card mengambang">
-                    <img src="aset/img/hd1.jpg" alt="Pesantren" loading="lazy">
-                    <span>Ruang</span>
-                    <p>Jumlah Ruang kelas dan Fasilitas lainnya ~57 Ruang</p>
+                <div class="mengambang h-[350px] w-[250px] p-2.5 my-2.5 mx-2.5 flex flex-col justify-center items-center p-2.5 bg-white rounded-[30px] transition-all duration-400">
+                    <img src="aset/img/hd1.jpg" alt="Pesantren" loading="lazy" class="w-full rounded-[10px]">
+                    <span class="underline scale-150 my-2.5">Ruang</span>
+                    <p class="text-sm">Jumlah Ruang kelas dan Fasilitas lainnya ~57 Ruang</p>
                 </div>
             </div>
-            
         </div>
     </div>
 
     <!-- Galery -->
-    <div class="container5">
-        <div class="galery">
-            <h2><span>Galeri SMK</span></h2>
-            <div class="row">
-                <div class="column">
-                    <img src="aset/img/galeri/01.png" alt="01" loading="lazy">
-                    <img src="aset/img/galeri/02.png" alt="02" loading="lazy">
-                    <img src="aset/img/galeri/03.png" alt="03" loading="lazy">
-                    
+    <div class="w-full p-[10%_7.5%] text-center">
+        <div class="p-[50px_0] bg-white rounded-[30px] shadow-lg">
+            <h2 class="text-xl md:text-2xl font-bold"><span class="text-white px-[50px] py-5 rounded-[20px] bg-blue-700 bg-opacity-70">Galeri SMK</span></h2>
+            <div class="flex flex-wrap p-0 justify-center mt-[30px]">
+                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5">
+                    <img src="aset/img/galeri/01.png" alt="01" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/02.png" alt="02" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/03.png" alt="03" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
                 </div>
-                <div class="column">
-                    <img src="aset/img/galeri/04.png" alt="04" loading="lazy">
-                    <img src="aset/img/galeri/05.png" alt="05" loading="lazy">
-                    <img src="aset/img/galeri/06.png" alt="06" loading="lazy">
+                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5">
+                    <img src="aset/img/galeri/04.png" alt="04" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/05.png" alt="05" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/06.png" alt="06" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
                 </div>
-                <div class="column hilang">
-                    <img src="aset/img/galeri/07.png" alt="07" loading="lazy">
-                    <img src="aset/img/galeri/08.png" alt="08" loading="lazy">
-                    <img src="aset/img/galeri/09.png" alt="09" loading="lazy">
+                <div class="flex-[25%] max-w-[25%] m-[0_10px] px-2.5 hidden lg:flex lg:flex-col">
+                    <img src="aset/img/galeri/07.png" alt="07" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/08.png" alt="08" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
+                    <img src="aset/img/galeri/09.png" alt="09" loading="lazy" class="mt-5 w-full rounded-[10px] transition-all duration-400 grayscale hover:grayscale-0 hover:scale-105" style="box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);">
                 </div>
             </div>
         </div>
-        
     </div>
 
     <!-- Foother -->
-    <footer>
-        <h3>SMK Muhammadiyah 04 Boyolali</h3>
-        <div class="sosmet">
-            <a class="wa" href="#"><img src="aset/icon/wa.png" alt="wa"></a>
-            <a class="ig" href="#"><img src="aset/icon/ig.png" alt="ig"></a>
-            <a class="fb" href="#"><img src="aset/icon/fb.png" alt="fb"></a>
-            <a class="yt" href="#"><img src="aset/icon/youtube.png" alt="yt"></a>
+    <footer class="h-auto w-full flex flex-col justify-center items-center text-center bg-blue-700 bg-opacity-70">
+        <h3 class="p-3.75 text-white text-lg md:text-xl">SMK Muhammadiyah 04 Boyolali</h3>
+        <div class="flex justify-center items-center">
+            <a class="wa flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-green-500 hover:bg-opacity-50 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/wa.png" alt="wa" class="w-[25px] h-[25px]"></a>
+            <a class="ig flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-pink-500 hover:bg-opacity-70 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/ig.png" alt="ig" class="w-[25px] h-[25px]"></a>
+            <a class="fb flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-blue-600 hover:bg-opacity-50 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/fb.png" alt="fb" class="w-[25px] h-[25px]"></a>
+            <a class="yt flex p-2.5 bg-white bg-opacity-75 rounded-full items-center justify-center mx-2.5 transition-all duration-300 hover:bg-red-500 hover:bg-opacity-80 hover:shadow-lg hover:scale-125" href="#"><img src="aset/icon/youtube.png" alt="yt" class="w-[25px] h-[25px]"></a>
         </div>
-        <div class="copy">
-            <span>Copyright&copy; 2024 Joko Purnomo</span> | <a href="https://www.freepik.com">Icon by Freepik</a>
+        <div class="text-white p-2.5 w-full bg-blue-700">
+            <span>Copyright&copy; 2024 Joko Purnomo</span> | <a href="https://www.freepik.com" class="text-white no-underline">Icon by Freepik</a>
         </div>
     </footer>
 
