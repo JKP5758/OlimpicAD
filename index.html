@@ -124,35 +124,126 @@
     </div>
 
     <!-- Data -->
-    <div class="w-full p-[5%]" id="data">
-        <div class="w-full flex flex-wrap flex-row justify-around items-center p-[5%] rounded-[30px] shadow-lg bg-white bg-opacity-75 gap-8 md:gap-4 flex-col md:flex-row">
-            <div class="mengambang w-full md:w-1/2 h-full flex flex-col bg-white rounded-[40px] justify-around text-center items-center p-[5%] transition-all duration-400">
-                <div class="title">
-                    <h2 class="font-bold text-lg md:text-xl">SMK MUHAMMADIYAH 04 BOYOLALI</h2>
-                    <h3 class="text-sm md:text-base">Jl. Lembayung No. 4 Boyolali</h3>
-                </div>
-                <p class="mt-2.5 text-sm md:text-base">SMK Muhammadiyah 04 Boyolali adalah sekolah yang memiliki komitmen untuk menghasilkan lulusan yang siap kerja, berjiwa wirausaha, cerdas, kompetitif,dan memiliki jati diri bangsa, serta mampu mengembangkan keunggulan lokal dan dapat bersaing di pasar global.</p>
+    <div class="w-full bg-gradient-to-b from-gray-100 to-white py-16 px-4 sm:px-8" id="data">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Profil Sekolah</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Mengenal lebih dekat tentang SMK Muhammadiyah 04 Boyolali dan pencapaiannya</p>
             </div>
-            <div class="w-full md:w-1/2 h-full flex flex-row justify-around text-center items-center p-[5%] flex-wrap gap-2.5">
-                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
-                    <img src="aset/icon/teacher.png" alt="icon1" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
-                        <h4>Jumlah Guru</h4>
-                        <h3 class="font-bold text-lg">57</h3>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Left: Image -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <img src="aset/img/school-profile.jpg" alt="SMK Profile" class="relative w-full rounded-2xl shadow-2xl object-cover h-96">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent rounded-2xl"></div>
+                </div>
+
+                <!-- Right: Description -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-600">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl">🏫</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Alamat</h3>
+                                <p class="text-gray-600">Jl. Lembayung No. 4 Boyolali</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-indigo-600">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl">📋</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Visi Kami</h3>
+                                <p class="text-gray-600">Menghasilkan lulusan yang siap kerja, berjiwa wirausaha, cerdas, kompetitif dan bermoral</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-600">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl">🌟</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Misi</h3>
+                                <p class="text-gray-600">Mengembangkan keunggulan lokal dan kompetitif di pasar global</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
-                    <img src="aset/icon/class.png" alt="icon2" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
-                        <h4>Jumlah Ruang Kelas</h4>
-                        <h3 class="font-bold text-lg">31</h3>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white mb-16">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-12">Data Sekolah</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <!-- Guru -->
+                    <div class="text-center group">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 group-hover:bg-white/30 transition-all duration-300 transform group-hover:scale-105">
+                            <div class="text-5xl md:text-6xl font-bold mb-3 group-hover:scale-110 transition-transform duration-300">57</div>
+                            <div class="text-lg md:text-xl font-semibold mb-2">👨‍🏫 Guru</div>
+                            <p class="text-white/80 text-sm">Profesional Berpengalaman</p>
+                        </div>
+                    </div>
+
+                    <!-- Kelas -->
+                    <div class="text-center group">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 group-hover:bg-white/30 transition-all duration-300 transform group-hover:scale-105">
+                            <div class="text-5xl md:text-6xl font-bold mb-3 group-hover:scale-110 transition-transform duration-300">31</div>
+                            <div class="text-lg md:text-xl font-semibold mb-2">🏛️ Ruang Kelas</div>
+                            <p class="text-white/80 text-sm">Modern & Lengkap</p>
+                        </div>
+                    </div>
+
+                    <!-- Siswa -->
+                    <div class="text-center group">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 group-hover:bg-white/30 transition-all duration-300 transform group-hover:scale-105">
+                            <div class="text-5xl md:text-6xl font-bold mb-3 group-hover:scale-110 transition-transform duration-300">~1085</div>
+                            <div class="text-lg md:text-xl font-semibold mb-2">👨‍🎓 Siswa</div>
+                            <p class="text-white/80 text-sm">Berdedikasi & Berprestasi</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang px-3.75 my-2.5 w-full flex flex-row items-center bg-white rounded-[15px] transition-all duration-400">
-                    <img src="aset/icon/pople.png" alt="icon3" class="w-[75px] h-[75px] p-2.5 rounded-[15px] transition-all duration-600 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="w-full p-2.5 flex justify-center items-center flex-col">
-                        <h4>Jumlah Siswa</h4>
-                        <h3 class="font-bold text-lg">~1085</h3>
+            </div>
+
+            <!-- Facilities -->
+            <div>
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Fasilitas Unggulan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 h-64">
+                            <img src="aset/img/facility-1.jpg" alt="Luas Sekolah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-white text-xl font-bold">Luas Sekolah</h4>
+                                <p class="text-white/90">12.682 m²</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 h-64">
+                            <img src="aset/img/facility-2.jpg" alt="Bangunan Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-white text-xl font-bold">Bangunan</h4>
+                                <p class="text-white/90">3.695 m²</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 h-64">
+                            <img src="aset/img/facility-3.jpg" alt="Ruang & Fasilitas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/40 transition-all duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h4 class="text-white text-xl font-bold">Ruang & Fasilitas</h4>
+                                <p class="text-white/90">~57 Ruang</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,61 +251,150 @@
     </div>
 
     <!-- Program Pengembangan -->
-    <div class="w-full p-[10%]" id="program">
-        <div class="w-full p-0 md:p-[0_10%] flex flex-col flex-wrap justify-start">
-            <div class="px-5 py-5 mx-2.5 rounded-[10px]">
-                <h2 class="text-xl md:text-2xl"><span class="px-2.5 py-1.25 text-white bg-blue-700 bg-opacity-70 rounded-[10px]">PROGRAM</span> KEAHLIAN</h2>
+    <div class="w-full bg-white py-16 px-4 sm:px-8" id="program">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Program Keahlian</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">7 Program Keahlian dengan Kurikulum Terkini dan Fasilitas Lengkap</p>
             </div>
-            <div class="w-full">
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/gear.png" alt="program1" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Teknik Mekanik Industri</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik Mekanik Industri mempelajari desain, produksi, dan pemeliharaan sistem mekanik dalam konteks industri untuk meningkatkan efisiensi produksi.</p>
+
+            <!-- Programs Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-400 to-red-600">
+                        <img src="aset/icon/gear.png" alt="Teknik Mekanik" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-400/80 to-red-600/80 group-hover:from-orange-500 group-hover:to-red-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">⚙️ INDUSTRI</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Teknik Mekanik Industri</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Desain, produksi, dan pemeliharaan sistem mekanik untuk meningkatkan efisiensi industri modern.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">CAD</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">CNC</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">Otomasi</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/car.png" alt="program2" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Teknik Kendaraan Ringan</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik Kendaraan Ringan mempersiapkan mahasiswa untuk memahami dan mengelola teknologi dalam perawatan, perbaikan, dan manajemen kendaraan bermotor ringan seperti mobil dan sepeda motor.</p>
+
+                <!-- Program 2 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-400 to-cyan-600">
+                        <img src="aset/icon/car.png" alt="Teknik Kendaraan" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/80 to-cyan-600/80 group-hover:from-blue-500 group-hover:to-cyan-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">🚗 OTOMOTIF</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Teknik Kendaraan Ringan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Teknologi perawatan dan perbaikan kendaraan bermotor dengan standar internasional.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">Diagnostik</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">Engine</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">Body</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/motor.png" alt="program3" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Teknik dan Bisnis Sepada Motor</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Teknik dan Bisnis Sepeda Motor membekali mahasiswa dengan pengetahuan teknis dan keterampilan bisnis yang diperlukan untuk merancang, memproduksi, dan mengelola bisnis sepeda motor serta industri terkait.</p>
+
+                <!-- Program 3 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-yellow-400 to-amber-600">
+                        <img src="aset/icon/motor.png" alt="Bisnis Motor" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/80 to-amber-600/80 group-hover:from-yellow-500 group-hover:to-amber-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">🏍️ BISNIS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Teknik & Bisnis Sepeda Motor</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Kombinasi teknis dan entrepreneurship untuk membangun bisnis otomotif berkelanjutan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Teknis</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Bisnis</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">Marketing</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/laptop.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Rekayasa Perangkat Lunak</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Rekayasa Perangkat Lunak mempersiapkan mahasiswa untuk mengembangkan perangkat lunak, mulai dari perencanaan hingga implementasi, serta memahami prinsip-prinsip desain dan manajemen proyek perangkat lunak.</p>
+
+                <!-- Program 4 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-purple-400 to-pink-600">
+                        <img src="aset/icon/laptop.png" alt="Software" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400/80 to-pink-600/80 group-hover:from-purple-500 group-hover:to-pink-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">💻 IT</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rekayasa Perangkat Lunak</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Pengembangan software profesional dari perencanaan hingga implementasi dan maintenance.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">Web Dev</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">Mobile</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">Database</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/cutlery.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Tata Boga</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Tata Boga mempersiapkan mahasiswa untuk menguasai keterampilan memasak, manajemen dapur, dan pelayanan makanan untuk industri perhotelan dan restoran.</p>
+
+                <!-- Program 5 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-green-400 to-emerald-600">
+                        <img src="aset/icon/cutlery.png" alt="Tata Boga" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-400/80 to-emerald-600/80 group-hover:from-green-500 group-hover:to-emerald-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">🍽️ KULINER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tata Boga</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Seni kuliner profesional untuk industri perhotelan, restoran, dan katering terkemuka.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Masak</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Pastry</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">Manajemen</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/video.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Multimedia</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Multimedia mempersiapkan mahasiswa untuk menguasai berbagai teknologi dan keterampilan kreatif, seperti desain grafis, produksi video, dan animasi, untuk menciptakan konten multimedia yang inovatif dan menarik.</p>
+
+                <!-- Program 6 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-red-400 to-rose-600">
+                        <img src="aset/icon/video.png" alt="Multimedia" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-400/80 to-rose-600/80 group-hover:from-red-500 group-hover:to-rose-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">🎥 KREATIF</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Multimedia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Desain grafis, produksi video, dan animasi untuk konten multimedia inovatif.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-medium">Desain</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-medium">Video</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-medium">Animasi</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mengambang flex flex-row flex-wrap items-center my-[30px] p-5 rounded-[20px] transition-all duration-600 bg-white hover:shadow-lg">
-                    <img src="aset/icon/medicine.png" alt="program4" class="w-[115px] h-[115px] p-5 rounded-[20px] transition-all duration-800 hover:bg-blue-700 hover:bg-opacity-70">
-                    <div class="max-w-full md:max-w-[75%] flex flex-wrap flex-col p-2.5">
-                        <h3 class="font-bold text-base md:text-lg">Farmasi Klink dan Komunitas</h3>
-                        <p class="mt-1.25 text-sm md:text-base">Jurusan Farmasi Klinik dan Komunitas mempersiapkan mahasiswa untuk memberikan layanan farmasi yang berkualitas baik di lingkungan klinik maupun masyarakat. Mereka mempelajari tentang penggunaan obat-obatan, konseling pasien, manajemen farmasi, serta peran farmasis dalam sistem perawatan kesehatan.</p>
+
+                <!-- Program 7 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 md:col-span-1 lg:col-span-3 lg:w-1/3 lg:mx-auto">
+                    <div class="relative overflow-hidden h-48 bg-gradient-to-br from-indigo-400 to-blue-600">
+                        <img src="aset/icon/medicine.png" alt="Farmasi" class="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-400/80 to-blue-600/80 group-hover:from-indigo-500 group-hover:to-blue-700 transition-all duration-300"></div>
+                        <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">💊 KESEHATAN</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Farmasi Klinik & Komunitas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Layanan farmasi profesional di klinik, rumah sakit, dan komunitas dengan standar kesehatan internasional.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-medium">Klinis</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-medium">Komunitas</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-medium">Farmakologi</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 text-center">
+                <p class="text-gray-600 text-lg mb-6">Tertarik bergabung dengan program keahlian kami?</p>
+                <a href="#" class="inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    📝 Daftar Sekarang
+                </a>
             </div>
         </div>
     </div>
